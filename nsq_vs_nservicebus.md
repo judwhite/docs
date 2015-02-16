@@ -165,3 +165,6 @@ There's a lot of productivity/maintenance value here and I want to present compl
 SLOC for nsqd, nsqlookupd
 
 http://www.davegardner.me.uk/blog/2012/11/06/stream-de-duplication/
+
+NSQ Resiliency Proposal
+https://docs.google.com/document/d/1vxPKbLYckD80OiG9CxTWZufB4lv0b3hGZy4C9yBmI_k/edit
