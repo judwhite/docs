@@ -2,7 +2,31 @@
 
 ## Introduction
 
-This document aims to call out the deficiencies we've experienced with NServiceBus, how these deficiencies impact development productivity, and how they will continue to impact productivity in an environment where the majority of the work is in backend system development which depends on message queues.
+This document aims to call out the deficiencies we experience with NServiceBus, how these deficiencies impact development productivity, and how they will continue to impact productivity in an environment where the majority of the work is in backend system development which depends on messaging.
+
+The specific issues we aim to address:
+* Interoperability when using the same transport (custom subscription methods, cross-team coordination, database scripts and deployment)
+* Performance (enqueue and dequeue performance drops off significantly with database contention)
+* Configurability (separate process needed for each queue)
+* Deployment issues - startup/shutdown time
+* Cryptic error messages when:
+  - Configuration is wrong
+  - The process crashes
+  - Deployment is incomplete (missing language folders leads to Assembly scanning throwing)
+* Time permitted for a message to be processed is tied to SQL Transaction timeout limit; changing machine.config is a maintenance and repeatability issue given the number of servers involved.
+* Integration testing
+* DTC - easy to miss in configuration, hard to spot depending on environment differences (don't use IsTransactional = false leads to lost messages on failure, no requeue)
+* Issues running local with several processes
+ 
+Excluded from the above list are issues when using MSMQ for transport, different serialization methods, or different versions of NServiceBus. These issues could be solved by standardizing on the above differences. However, these are still real issues we face today:
+* MSMQ clusters are difficult to configure and deploy correctly. If a proper cluster cannot be achieved you must choose between a SPOF or message duplication; this affects all consumers of event publishers using MSMQ for transport.
+* Interoperability issues when using different major versions (v3/v4/v5); for example, publishing an assembly containing message contracts requires a reference to NServiceBus to get IMessage, coupling data contracts not only with NServiceBus but specific versions.
+* Interoperability when using different transports (MSMQ and SQL Server) requires a process hop.
+* Serialization method is global to the process; when changing from XML to JSON or vice versa a process hop must occur to get into the target NServiceBus queue. This also affects NServiceBus configured to use SQL Server.
+
+Recently we confirmed a bug in v4.6.1 of NServiceBus which will randomly take down a process. The bug has been patched in our version of NServiceBus, however other teams remain exposed. Upgrading to NServiceBus 5 requires anyone still on .NET 4.0 to upgrade to .NET 4.5, and the upgrade path is not light on changes - http://docs.particular.net/nservicebus/upgradeguides/4to5.
+
+
 
 ## Pre-Evaluation Process
 
