@@ -71,3 +71,92 @@ Supports AMQP now, they also have a .NET client which was just rev’d a few day
   - Good info on RabbitMQ and Kafka (2012)
 * http://www.bravenewgeek.com/dissecting-message-queues
   - Various MQs (2014)
+
+##### Rough notes
+
+Simplify Configuration
+Used by: bitly, docker, digg, BuzzFeed, and many others that advertise use
+
+The real power of NSQ, that I’m sure the community can attest to, is how easy it is to build real systems on top of.  I sincerely doubt it will be your bottleneck but I can damn near guarantee you’ll enjoy working with it.
+
+Topics - Event types "a unique stream of messages"
+Channels - Event subscriptions - "a copy of that stream of messages for a given set of consumers",
+  "an independent queue for a topic (a topic can have multiple channels)"
+Messages - Events
+
+"Think of a topic as a unique stream of messages or events.
+Think of a channel as a copy of that stream of messages for a given set of consumers.
+Topics and channels are both independent queues."
+
+Topics and Channels are created at runtime
+
+Transport
+TCP: nsqd 4150, nsqlookupd 4160
+HTTP: nsqd 4151, nsqlookupd 4161
+
+Persistence
+Disk
+High water mark
+Can modify to use SQL
+
+Deployment topology/architecture
+Each machine has an instance of nsqd
+a single nsqd instance can have multiple topics
+Each data center has a few instances of nsqlookupd
+
+Consumers do not need their own nsqd
+Consumers and Publishers can live side by side
+
+Consumers discover producers by querying nsqlookupd (a discovery service for topics)
+Consumers connect to all producers
+Messages are "pushed" to Consumers
+Multiple Consumers for a given channel
+
+nsqlookupd instances are independent and require no coordination (run a few for HA)
+
+Guarantees
+- Messages are delivered at least once
+- Handling is guaranteed by the protocol
+  - nsqd sends a message and stores it temporarily
+  - client replies FIN (finish) or REQ (re-queue)
+  - if client does not reply message is automatically re-queued
+- Any single nsqd instance failure can result in message loss (can be mitigated)
+
+http://word.bitly.com/post/38385370762/spray-some-nsq-on-it
+https://speakerdeck.com/snakes/nsq-nyc-golang-meetup?slide=19
+
+
+Tooling
+
+nsqadmin - web interface to administrate and introspect an NSQ cluster at runtime (empty, pause, delete channels)
+
+nsq_tail - see what's flowing through a channel in real time
+channel pausing
+- stop the flow of messages from a channel to its clients
+- no message loss (queue backs up)
+- really $#%^ing awesome for operations
+
+Why Queue?
+(because things break)
+- try to avoid SPOFs
+- queues and workers are silo'd
+- in failure scenarios:
+  - queues provide buffering
+  - workers exponentially back off
+  - messages are retried
+  - aka no data loss
+
+- Simpler configuration - easier to create new queues, split queues, version queues, create priority lanes, etc
+- Less deployment headaches, less interoperability headaches
+- Empty/pause queues at runtime through provided tooling (good for when queues build up over processing throughput or process needs fresh run); real-time queue monitoring
+- Easily extensible to include workflows/sagas - multipart jobs with callbacks (we could use this in catalog denorm)
+- Unit testability
+- Ability to balance durability and speed depending on needs. For example, long running daily jobs could value speed, event notifications could value durability.
+
+All real problems we face today.
+
+The "Simple" is deceptively important since the lack of simple (or even predictable) is the cause of a lot of NSB pain. It's also a reflection of how it's exposed to the developer; simple does not imply thoughtless under the hood.
+
+There's a lot of productivity/maintenance value here and I want to present complete answers to concerns and avoid an early dismissal.
+
+SLOC for nsqd, nsqlookupd
