@@ -160,3 +160,5 @@ The "Simple" is deceptively important since the lack of simple (or even predicta
 There's a lot of productivity/maintenance value here and I want to present complete answers to concerns and avoid an early dismissal.
 
 SLOC for nsqd, nsqlookupd
+
+http://www.davegardner.me.uk/blog/2012/11/06/stream-de-duplication/
