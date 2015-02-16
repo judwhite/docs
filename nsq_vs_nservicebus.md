@@ -146,6 +146,9 @@ Why Queue?
   - messages are retried
   - aka no data loss
 
+Why would I want to invest in a different messaging technology, isn't our current one good enough even if it's not perfect? Is this going to become a distraction?
+
+NServiceBus is a persistent distraction as we scale up the responsibilities of our backend services.
 - Simpler configuration - easier to create new queues, split queues, version queues, create priority lanes, etc
 - Less deployment headaches, less interoperability headaches
 - Empty/pause queues at runtime through provided tooling (good for when queues build up over processing throughput or process needs fresh run); real-time queue monitoring
