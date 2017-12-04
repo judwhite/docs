@@ -37,8 +37,9 @@ get a job done."
 - https://www.youtube.com/watch?v=G3ujSdu8mYQ - Tony Ulwick (Strategyn) - Turn Jobs-to-be-Done Theory Into Practice (57m28s)
   - Key Takeaways:
     - Satisfaction and Importance scores
-- Intercom on Jobs-to-be-Done - http://jud.io/papers/cicd/Intercom_on_Jobs-to-be-Done.pdf
-- JTBD Cheatsheet - http://jud.io/papers/cicd/JTBD_Cheatsheet.pdf
+- Intercom on Jobs-to-be-Done - http://jud.io/papers/jtbd/Intercom_on_Jobs-to-be-Done.pdf
+- JTBD Cheatsheet - http://jud.io/papers/jtbd/JTBD_Cheatsheet.pdf
+- JTBD Examples - http://jud.io/papers/jtbd/thrv-White-Paper-with-JTBD-Examples.pdf
 - https://strategyn.com/jobs-to-be-done/jobs-to-be-done-theory/
 - https://strategyn.com/customer-centered-innovation-map/
 - https://strategyn.com/jobs-to-be-done/jobs-to-be-done-examples/
