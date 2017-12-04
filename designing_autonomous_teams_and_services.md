@@ -32,6 +32,9 @@ More on JTBD:
 - https://www.youtube.com/watch?v=f2l75aAJo44 - Bob Moesta - Understanding the Jobs to be Done (8m13s)
 - https://www.youtube.com/watch?v=GLDqs099mXE - Bob Moesta - The Causality of Consumer Behavior - (9m54s)
 - https://www.youtube.com/watch?v=VNTW_9mFM7k - Sian Townsend - Jobs to be Done: from Doubter to Believer (36m46s)
+- https://www.youtube.com/watch?v=G3ujSdu8mYQ - Tony Ulwick (Strategyn) - Turn Jobs-to-be-Done Theory Into Practice (57m28s)
+  - Key Takeaways:
+    - Satisfaction and Importance scores
 - Intercom on Jobs-to-be-Done - http://jud.io/papers/cicd/Intercom_on_Jobs-to-be-Done.pdf
 - JTBD Cheatsheet - http://jud.io/papers/cicd/JTBD_Cheatsheet.pdf
 - https://strategyn.com/jobs-to-be-done/jobs-to-be-done-theory/
