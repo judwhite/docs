@@ -94,6 +94,13 @@ get a job done."
 - https://www.youtube.com/watch?v=f2l75aAJo44 - Bob Moesta - Understanding the Jobs to be Done (8m13s)
 - https://www.youtube.com/watch?v=GLDqs099mXE - Bob Moesta - The Causality of Consumer Behavior - (9m54s)
 - https://www.youtube.com/watch?v=VNTW_9mFM7k - Sian Townsend - Jobs to be Done: from Doubter to Believer (36m46s)
+  - Personas: As a <persona> I want to <action> so that <goal>
+    - The jump from persona to action has a lot of assumptions. The person may be irrelevant, and may even be distracting.
+    - Personas are a collection of attributes. They don't explain causality.
+  - JTBD: When <situation> I want to <need> so I can <goal>
+    - Start with the problem = iteration
+    - Start with the job = innovation
+    - There may be unexpected jobs currently being solved by existing functions inadequately. For example, a map of customers around the world which is actually a showpiece to be shared. Develop a better showpiece, not a better map.
 - https://www.youtube.com/watch?v=G3ujSdu8mYQ - Tony Ulwick (Strategyn) - Turn Jobs-to-be-Done Theory Into Practice (57m28s)
   - Key Takeaways:
     - Satisfaction and Importance scores
