@@ -101,6 +101,7 @@ get a job done."
     - Start with the problem = iteration
     - Start with the job = innovation
     - There may be unexpected jobs currently being solved by existing functions inadequately. For example, a map of customers around the world which is actually a showpiece to be shared. Develop a better showpiece, not a better map.
+    - Some goals may roll up into a larger job - for example, user requests for stats on a shared support team inbox, actual needed help managing the support team (staff count, scheduling, resolve times to set targets, etc)
     - Helps you figure out what to build.
 - https://www.youtube.com/watch?v=G3ujSdu8mYQ - Tony Ulwick (Strategyn) - Turn Jobs-to-be-Done Theory Into Practice (57m28s)
   - Key Takeaways:
