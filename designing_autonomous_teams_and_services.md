@@ -29,6 +29,8 @@ From memory:
 - On "micro" services: use the Bounded Contexts. The UX is the most difficult part. Think of how a product page on Amazon may be decomposed into separate teams/services (masthead, product details, reviews, recommendations)
 
 More on JTBD:
+- "Jobs-to-be-Done methods are based on a simple but powerful concept: your customers are not buying your product, they are hiring it to
+get a job done."
 - https://www.youtube.com/watch?v=f2l75aAJo44 - Bob Moesta - Understanding the Jobs to be Done (8m13s)
 - https://www.youtube.com/watch?v=GLDqs099mXE - Bob Moesta - The Causality of Consumer Behavior - (9m54s)
 - https://www.youtube.com/watch?v=VNTW_9mFM7k - Sian Townsend - Jobs to be Done: from Doubter to Believer (36m46s)
