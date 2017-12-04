@@ -40,3 +40,4 @@ More on JTBD:
 - https://jtbd.info/replacing-the-user-story-with-the-job-story-af7cdee10c27
 - https://medium.com/@marksweep/jobs-to-be-done-interview-script-d290c42b2b48
 - https://jtbd.info/a-script-to-kickstart-your-jobs-to-be-done-interviews-2768164761d7
+- JTBD/Analytics Cards: http://digitaljobstobedone.com/shop-usa/
