@@ -1,3 +1,13 @@
+Ch 1 - High Performing Teams Continously Deliver Business Value
+
+- Aligned Autonomy: A shared understanding of the company's strategic context and key objectives.
+- Autonomous Teams:
+  - Develop rich understanding of user needs through continuous discovery
+  - Have the autonomy to:
+    - Make business and product decisions (involves more than engineering, more below)
+    - Employ technical practices that enable continuous delivery
+    - Organize technical and team boundaries around business outcomes
+
 From memory:
 
 - OKRs: Objectives and Key Results.
